@@ -1,3 +1,5 @@
+import "./style.css";
+
 const URL = "http://api.quotable.io/random";
 
 async function getData(URL) {
@@ -8,8 +10,8 @@ async function getData(URL) {
     } else {
       const data = await response.json();
       document.getElementById("api-response").textContent = data.content;
-
       console.log(response.status);
+      console.log(data.author);
     }
   } catch (error) {
     console.log(error);
