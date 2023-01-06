@@ -9,13 +9,28 @@ body,
   font-size: 62.5%; /* Normally 100% is 16px, we want the size to be 10pz, so we do 62.5% */
 }
 
-.a {
-padding: 5rem;
-font-size: 100rem;
-width: 100rem;
+#a,
+#i,
+#l {
+padding: 1rem;
+font-size: 3rem;
+margin: 5rem;
+}
+
+#submit {
+margin-left: 2rem;
+padding: 0.7rem;
+font-size: 2.5rem;
 }
 
 h1 {
-font-size: 8rem;
+font-size: 7rem;
+}
 
+#tb {
+font-size: 3.5rem;
+}
+
+#api-response {
+  font-size: 2.5rem;
 }
