@@ -8,9 +8,11 @@ async function getData(URL) {
       throw new Error(response);
     } else {
       const data = await response.json();
-      document.getElementById("api-response").textContent = data.content;
+      document.getElementById("api-response1").textContent = data.content;
+      document.getElementById("api-response2").textContent = data.author;
       console.log(response.status);
       console.log(data.author);
+      console.log(data.content);
     }
   } catch (error) {
     console.log(error);
@@ -19,15 +21,17 @@ async function getData(URL) {
 }
 getData(URL);
 
-function card() {
-  menu.forEach((food) => {
-    DOMSelectors.displaySection.insertAdjacentHTML(
-      "beforeend",
-`<div class="display-card" data-aos="flip-up">
-  <h3 class= "display-name"> ${author.name} </h3>
-  <h4 class= "display-content"> ${author.content} </h4>`;
+/* function card() {
+  DOMSelectors.displaySection.insertAdjacentHTML(
+    "beforeend",
+    `<div class="display-card">
+  <h3 class= "display-name"> ${data.name} </h3>
+  <h4 class= "display-content"> ${data.content} </h4>
+  </div>`
+  );
+}
+card(); */
 
-  
 const DOMSelectors = {
   AuthorBtn: document.querySelector(".a"),
   IDBtn: document.querySelector(".i"),
