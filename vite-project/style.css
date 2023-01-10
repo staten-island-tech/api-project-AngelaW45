@@ -9,9 +9,9 @@ body,
   font-size: 62.5%; /* Normally 100% is 16px, we want the size to be 10pz, so we do 62.5% */
 }
 
-#a,
-#i,
-#l {
+#c,
+#e,
+#w {
 padding: 1rem;
 font-size: 3rem;
 margin: 5rem;
@@ -31,11 +31,11 @@ font-size: 7rem;
 font-size: 3.5rem;
 }
 
-#api-response1 {
+#api-response-1 {
   font-size: 2.5rem;
 }
 
-#api-response2 {
+#api-response-2 {
   font-size: 2.5rem;
 }
 

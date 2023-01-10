@@ -1,5 +1,5 @@
 import "./style.css";
-const URL = "http://api.quotable.io/random";
+const URL = "https://api.genshin.dev/";
 
 async function getData(URL) {
   try {
@@ -8,15 +8,14 @@ async function getData(URL) {
       throw new Error(response);
     } else {
       const data = await response.json();
-      document.getElementById("api-response1").textContent = data.content;
-      document.getElementById("api-response2").textContent = data.author;
+      document.getElementById("api-response-1").textContent = data.Character;
+      document.getElementById("api-response-2").textContent = Character.vision;
       console.log(response.status);
-      console.log(data.author);
-      console.log(data.content);
+      console.log(data);
     }
   } catch (error) {
     console.log(error);
-    console.log("could not find, please try again");
+    console.log("Could not find, please try again");
   }
 }
 getData(URL);
@@ -33,7 +32,7 @@ getData(URL);
 card(); */
 
 const DOMSelectors = {
-  AuthorBtn: document.querySelector(".a"),
-  IDBtn: document.querySelector(".i"),
-  LengthBtn: document.querySelector(".l"),
+  Character: document.querySelector(".c"),
+  Element: document.querySelector(".e"),
+  WeaponType: document.querySelector(".w"),
 };
