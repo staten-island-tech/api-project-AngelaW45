@@ -15,12 +15,16 @@ body,
 padding: 1rem;
 font-size: 3rem;
 margin: 5rem;
+background-color: blueviolet;
+border-radius: 2rem;
 }
 
 #submit {
 margin-left: 2rem;
 padding: 0.7rem;
 font-size: 2.5rem;
+border-radius: 2rem;
+background-color: blueviolet;
 }
 
 h1 {
@@ -31,14 +35,128 @@ font-size: 7rem;
 font-size: 3.5rem;
 }
 
-#api-response-1 {
-  font-size: 2.5rem;
-}
-
-#api-response-2 {
+#api-response-1,
+#api-response-2,
+#api-response-3 {
   font-size: 2.5rem;
 }
 
 .display-card {
 background-color: aqua;
 }
+
+.flip-card {
+  background-color: transparent;
+  width: 45rem;
+  height: 45rem;
+  perspective: 1000px;
+  margin: 5rem auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: var(--primary);
+}
+
+.flip-card-front {
+  color: black;
+  border-radius: 15px;
+  padding-top: 3vh;
+}
+
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 15px;
+  padding-top: 2vh;
+}
+.card-animation {
+  background-color: var(--secondary);
+  padding-top: 5rem;
+}
+
+.header-animation {
+  background-color: var();
+  height: 10vh;
+  font-size: 5rem;
+}
+
+
+:root {
+  --grey: #2b2b2c;
+  --black: #000000;
+  --light-blue: #6c7ef7;
+  --dark-blue: #504dda;
+  --light-orange: #d38958;
+  --dark-orange: #d16822;
+
+  --primary: var(--light-blue);
+  --secondary: var(--dark-blue);
+
+  --app: 3.375rem;
+  --h1: 7.594rem;
+  --h2: 5.063rem;
+  --h3: 3.375rem;
+  --h4: 2.25rem;
+  --h5: 1.5rem;
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-align: center;
+  margin: auto;
+}
+
+
+/* .display-name,
+.display-type,
+.display-weapon,
+.display-discription,
+.display-birthday,
+.display-gender,
+.displpay-rarity {
+
+  font-size: 8rem;
+} */
