@@ -7,15 +7,30 @@
     <title>Fetch API</title>
   </head>
   <body>
-    <h1 id="header">Find quote by...</h1>
+    <h1 id="header">Find Genshin Characters by...</h1>
+    <h4 id="disclaimer">Disclaimer: Not all data for the characters in the game are here, sorry for the inconvenience</h4>
     <div class="btn">
-      <button id="c">Character</button>
-      <button id="e">Element</button>
+      <button id="c">AllCharacters</button>
+      <div class="popup" onclick="myFunction()">Click me!
+        <span class="popuptext" id="myPopup">Popup text...</span>
+      </div> 
+
+      <!-- https://www.w3schools.com/howto/howto_js_popup.asp#:~:text=1)%20Add%20HTML%3A-,Example,myFunction()%22%3EClick%20me!&gsc.tab=0 -->
+      
+
+
+      <button id="e">VisionType</button>
+      <div class="popup" onclick="myFunction()">Click me!
+        <span class="popuptext" id="myPopup">Popup text...</span>
+      </div> 
       <button id="w">WeaponType</button>
+      <div class="popup" onclick="myFunction()">Click me!
+        <span class="popuptext" id="myPopup">Popup text...</span>
+      </div> 
     </div>
 
-    <input id="tb" type="text" required="">
-    <button id="submit">submit</button>
+    <!-- <input id="tb" type="text" required="">
+    <button id="submit">submit</button> -->
 
     <section class="display" id="display"></section>
 

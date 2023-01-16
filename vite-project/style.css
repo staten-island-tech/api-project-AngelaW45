@@ -7,32 +7,44 @@ body,
   text-align: center;
   box-sizing: border-box;
   font-size: 62.5%; /* Normally 100% is 16px, we want the size to be 10pz, so we do 62.5% */
+  background-color: var();
 }
 
 #c,
 #e,
 #w {
-padding: 1rem;
-font-size: 3rem;
-margin: 5rem;
-background-color: blueviolet;
-border-radius: 2rem;
+  padding: 1rem;
+  font-size: 3rem;
+  margin: 5rem;
+  background-color: blueviolet;
+  border-radius: 2rem;
 }
 
+.display {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5rem auto;
+  width: 90%;
+  transition: all 0.3s;
+}
+/* 
 #submit {
-margin-left: 2rem;
-padding: 0.7rem;
-font-size: 2.5rem;
-border-radius: 2rem;
-background-color: blueviolet;
-}
+  margin-left: 2rem;
+  padding: 0.7rem;
+  font-size: 2.5rem;
+  border-radius: 2rem;
+  background-color: blueviolet;
+} */
 
-h1 {
-font-size: 7rem;
+#header {
+  padding-top: 10vh;
 }
 
 #tb {
-font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
 #api-response-1,
@@ -41,8 +53,15 @@ font-size: 3.5rem;
   font-size: 2.5rem;
 }
 
-.display-card {
-background-color: aqua;
+.display-birthday,
+.displpay-rarity {
+  padding: 4vh;
+}
+
+.display-name,
+.display-type,
+.display-weapon {
+  padding: 2vh;
 }
 
 .flip-card {
@@ -60,7 +79,6 @@ background-color: aqua;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -78,43 +96,35 @@ background-color: aqua;
 }
 
 .flip-card-front {
-  color: black;
+  color: var(--black);
   border-radius: 15px;
-  padding-top: 3vh;
+  padding: 5vh 2vh 5vh 2vh;
 }
 
 .flip-card-back {
-  color: white;
+  color: var(--white);
   transform: rotateY(180deg);
   border-radius: 15px;
-  padding-top: 2vh;
+  padding: 7vh;
 }
-.card-animation {
-  background-color: var(--secondary);
-  padding-top: 5rem;
-}
-
-.header-animation {
-  background-color: var();
-  height: 10vh;
-  font-size: 5rem;
-}
-
 
 :root {
-  --grey: #2b2b2c;
+  --white: #ffffff;
   --black: #000000;
-  --light-blue: #6c7ef7;
-  --dark-blue: #504dda;
-  --light-orange: #d38958;
-  --dark-orange: #d16822;
+  --pyro: #ef5333;
+  --geo: rgb(251, 215, 6);
+  --dendro: rgba(45, 252, 162, 0.697);
+  --anemo: #72e7c6;
+  --cryo: rgb(56, 238, 232);
+  --hydro: rgb(66, 92, 226);
+  --electro: rgb(153, 16, 212);
 
-  --primary: var(--light-blue);
-  --secondary: var(--dark-blue);
+  --primary: var(--electro);
+  --secondary: var(--hydro);
 
   --app: 3.375rem;
-  --h1: 7.594rem;
-  --h2: 5.063rem;
+  --h1: 7rem;
+  --h2: 5rem;
   --h3: 3.375rem;
   --h4: 2.25rem;
   --h5: 1.5rem;
@@ -148,15 +158,3 @@ h5 {
   text-align: center;
   margin: auto;
 }
-
-
-/* .display-name,
-.display-type,
-.display-weapon,
-.display-discription,
-.display-birthday,
-.display-gender,
-.displpay-rarity {
-
-  font-size: 8rem;
-} */
