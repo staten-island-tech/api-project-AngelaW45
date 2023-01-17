@@ -5,6 +5,8 @@ const DOMSelectors = {
   AllCharactersBtn: document.querySelector(".c"),
   VisionTypeBtn: document.querySelector(".e"),
   WeaponTypeBtn: document.querySelector(".w"),
+  FemaleBtn: document.querySelector(".f"),
+  MaleBtn: document.querySelector(".m"),
   displaySection: document.getElementById("display"),
 };
 
@@ -15,9 +17,9 @@ async function getData(characters) {
       throw new Error(response);
     } else {
       const data = await response.json();
-      document.getElementById("api-response-1").textContent = data.name;
+      /* document.getElementById("api-response-1").textContent = data.name;
       document.getElementById("api-response-2").textContent = data.vision;
-      document.getElementById("api-response-3").textContent = data.weapon;
+      document.getElementById("api-response-3").textContent = data.weapon; */
 
       function all() {
         data.forEach((character) => {
@@ -25,7 +27,6 @@ async function getData(characters) {
         });
       }
       all();
-
       function Sword() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -34,7 +35,6 @@ async function getData(characters) {
             card(CharWeapon);
           });
       }
-
       function Claymore() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -43,7 +43,6 @@ async function getData(characters) {
             card(CharWeapon);
           });
       }
-
       function Bow() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -52,7 +51,6 @@ async function getData(characters) {
             card(CharWeapon);
           });
       }
-
       function Polearm() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -61,7 +59,6 @@ async function getData(characters) {
             card(CharWeapon);
           });
       }
-
       function Catalyst() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -70,7 +67,6 @@ async function getData(characters) {
             card(CharWeapon);
           });
       }
-
       function Anemo() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -79,7 +75,6 @@ async function getData(characters) {
             card(Vision);
           });
       }
-
       function Pyro() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -88,7 +83,6 @@ async function getData(characters) {
             card(Vision);
           });
       }
-
       function Cryo() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -97,7 +91,6 @@ async function getData(characters) {
             card(Vision);
           });
       }
-
       function Hydro() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -106,7 +99,6 @@ async function getData(characters) {
             card(Vision);
           });
       }
-
       function Electro() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -115,7 +107,6 @@ async function getData(characters) {
             card(Vision);
           });
       }
-
       function Dendro() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -124,7 +115,6 @@ async function getData(characters) {
             card(Vision);
           });
       }
-
       function Geo() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
@@ -133,18 +123,18 @@ async function getData(characters) {
             card(Vision);
           });
       }
+      function female() {
+        DOMSelectors.displaySection.innerHTML = " ";
+        data
+          .filter((character) => character.gender === "female")
+          .forEach((character) => {
+            card(character);
+          });
+      }
 
-      DOMSelectors.AllCharactersBtn.addEventListener("click", function () {
-        
+      DOMSelectors.FemaleBtn.addEventListener("click", function () {
+        female();
       });
-
-      DOMSelectors.AllCharactersBtn.addEventListener("click", function () {
-        all();
-      });
-
-      /* AllCharactersBtn: document.querySelector(".c"),
-  VisionTypeBtn: document.querySelector(".e"),
-  WeaponTypeBtn: document.querySelector(".w"),*/
 
       console.log(response.status);
       console.log(data);
