@@ -7,6 +7,8 @@ const DOMSelectors = {
   WeaponTypeBtn: document.querySelector(".w"),
   FemaleBtn: document.querySelector(".f"),
   MaleBtn: document.querySelector(".m"),
+  Rarity4Btn: document.querySelector(".r4"),
+  Rarity5Btn: document.querySelector(".r5"),
   displaySection: document.getElementById("display"),
 };
 
@@ -21,13 +23,22 @@ async function getData(characters) {
       document.getElementById("api-response-2").textContent = data.vision;
       document.getElementById("api-response-3").textContent = data.weapon; */
 
+      function Pyro() {
+        DOMSelectors.displaySection.innerHTML = " ";
+        data
+          .filter((Vision) => Vision.vision === "pyro")
+          .forEach((Vision) => {
+            card(Vision);
+          });
+      }
+
       function all() {
         data.forEach((character) => {
           card(character);
         });
       }
       all();
-      function Sword() {
+      /*       function Sword() {r
         DOMSelectors.displaySection.innerHTML = " ";
         data
           .filter((CharWeapon) => CharWeapon.weapon === "sword")
@@ -122,8 +133,13 @@ async function getData(characters) {
           .forEach((Vision) => {
             card(Vision);
           });
+      } */
+      function AllCharacters() {
+        DOMSelectors.displaySection.innerHTML = " ";
+        all();
       }
-      function female() {
+
+      function Female() {
         DOMSelectors.displaySection.innerHTML = " ";
         data
           .filter((character) => character.gender === "female")
@@ -132,8 +148,51 @@ async function getData(characters) {
           });
       }
 
+      function Male() {
+        DOMSelectors.displaySection.innerHTML = " ";
+        data
+          .filter((character) => character.gender === "male")
+          .forEach((character) => {
+            card(character);
+          });
+      }
+
+      function Rarity4() {
+        DOMSelectors.displaySection.innerHTML = " ";
+        data
+          .filter((character) => character.rarity === 4)
+          .forEach((character) => {
+            card(character);
+          });
+      }
+
+      function Rarity5() {
+        DOMSelectors.displaySection.innerHTML = " ";
+        data
+          .filter((character) => character.rarity === 5)
+          .forEach((character) => {
+            card(character);
+          });
+      }
+
       DOMSelectors.FemaleBtn.addEventListener("click", function () {
-        female();
+        Female();
+      });
+
+      DOMSelectors.MaleBtn.addEventListener("click", function () {
+        Male();
+      });
+
+      DOMSelectors.Rarity4Btn.addEventListener("click", function () {
+        Rarity4();
+      });
+
+      DOMSelectors.Rarity5Btn.addEventListener("click", function () {
+        Rarity5();
+      });
+
+      DOMSelectors.AllCharactersBtn.addEventListener("click", function () {
+        AllCharacters();
       });
 
       console.log(response.status);
@@ -146,7 +205,6 @@ async function getData(characters) {
 }
 getData(characters);
 ``;
-
 /* async function getData(characters) {
   try {
     const response = await fetch(characters);

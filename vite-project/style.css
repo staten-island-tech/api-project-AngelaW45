@@ -7,14 +7,15 @@ body,
   text-align: center;
   box-sizing: border-box;
   font-size: 62.5%; /* Normally 100% is 16px, we want the size to be 10pz, so we do 62.5% */
-  background-color: var();
 }
 
-#c,
-#e,
-#w,
-#f,
-#m {
+.c,
+.e,
+.w,
+.f,
+.m,
+.r4,
+.r5 {
   padding: 1rem;
   font-size: 3rem;
   margin: 5rem;
@@ -94,7 +95,8 @@ body,
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: var(--primary);
+  background-color: var(--light-brown);
+  border: 1.5rem solid var(--primary);
 }
 
 .flip-card-front {
@@ -104,14 +106,15 @@ body,
 }
 
 .flip-card-back {
-  color: var(--white);
+  color: var(--black);
   transform: rotateY(180deg);
   border-radius: 15px;
-  padding: 7vh;
+  padding: 4vh;
 }
 
 :root {
   --white: #ffffff;
+  --light-brown: rgb(240, 229, 229);
   --black: #000000;
   --pyro: #ef5333;
   --geo: rgb(251, 215, 6);
