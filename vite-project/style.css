@@ -16,7 +16,9 @@ body,
 .m,
 .r4,
 .r5 {
-  padding: 1rem;
+  width: 28rem;
+  height: 8rem;
+  padding: 2rem 5rem 2rem 5rem;
   font-size: 3rem;
   margin: 5rem;
   background-color: blueviolet;
@@ -95,7 +97,7 @@ body,
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: var(--light-brown);
+  background-color: var(--gray);
   border: 1.5rem solid var(--primary);
 }
 
@@ -114,9 +116,9 @@ body,
 
 :root {
   --white: #ffffff;
-  --light-brown: rgb(240, 229, 229);
+  --gray: rgb(240, 235, 236);
   --black: #000000;
-  --pyro: #ef5333;
+  --pyro: #ef3333;
   --geo: rgb(251, 215, 6);
   --dendro: rgba(45, 252, 162, 0.697);
   --anemo: #72e7c6;
@@ -125,7 +127,7 @@ body,
   --electro: rgb(153, 16, 212);
 
   --primary: var(--electro);
-  --secondary: var(--hydro);
+  --secondary: var(--geo);
 
   --app: 3.375rem;
   --h1: 7rem;
