@@ -32,35 +32,21 @@ async function getData(characters) {
           });
       } */
 
-      var Vision = document.getElementsByClassName(display - type);
+      /*      var Vision = document.getElementsByClassName(display - type);
       var color;
       var border = document.getElementById("flip-card-front");
       // .flip-card-back
       if (Vision == "pyro" || Vision == "red" || Vision == "RED") {
         color = "var(--pyro)";
         border.style.borderColor = color;
-      }
+      } */
 
-      /* var getColor = prompt("Choose your color ", "Enter the  color ");
-      var color;
-      var el = document.getElementById("color");
-      el.innerHTML = "Whatever paragraph message.";
-      if (getColor =="Yellow" || getColor =="yellow" || getColor =="YELLOW"){
-          color = "#FFFF66";
-          el.style.borderColor = color;
-      }
-     
-      
-     .borders{
-         background-color:#00ffff;
-         border-color:#000000;
-         border-width:2px;
-         border-style:solid;
-     }
-     
-      
-     <p id="color" class="borders"></p>
- */
+
+     /* LINK FOR BUTTONS https://search.3schools.in/2022/08/create-multiple-buttons-js.html */
+
+
+
+
 
       function all() {
         data.forEach((character) => {

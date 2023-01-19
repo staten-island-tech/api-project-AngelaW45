@@ -15,7 +15,8 @@ body,
 .f,
 .m,
 .r4,
-.r5 {
+.r5,
+.c {
   width: 28rem;
   height: 8rem;
   padding: 2rem 5rem 2rem 5rem;
@@ -35,14 +36,6 @@ body,
   width: 90%;
   transition: all 0.3s;
 }
-/* 
-#submit {
-  margin-left: 2rem;
-  padding: 0.7rem;
-  font-size: 2.5rem;
-  border-radius: 2rem;
-  background-color: blueviolet;
-} */
 
 #header {
   padding-top: 10vh;
@@ -98,7 +91,7 @@ body,
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: var(--gray);
-  border: 1.5rem solid var(--primary);
+  border: 1rem solid var(--primary);
 }
 
 .flip-card-front {
@@ -126,7 +119,7 @@ body,
   --hydro: rgb(66, 92, 226);
   --electro: rgb(153, 16, 212);
 
-  --primary: var(--electro);
+  --primary: var(--black);
   --secondary: var(--geo);
 
   --app: 3.375rem;
