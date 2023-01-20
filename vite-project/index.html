@@ -15,53 +15,43 @@
       <!-- <div class="popup" onclick="myFunction()">Click me!
         <span class="popuptext" id="myPopup">Popup text...</span>
       </div>  -->
-      <button class="e">VisionType</button>
-      <button class="w">WeaponType</button>
       <button class="f">Female</button>
       <button class="m">Male</button>
       <button class="r4">Rarity: 4 Star</button>
       <button class="r5">Rarity: 5 Star</button>
-      <button class= "c" onclick="myFunction()">Card colors</button>
-    </div>
+      <button class="w" id="WBtn">WeaponType</button>
+      <button class="v" id="VBtn">VisionType</button>
 
-    <button onclick="myFunction(4)">Create Button</button>
+
+
+      <!-- <div id="button-container"></div>
+<button class="click" onclick="myFunction(4)">VisionType</button>
+
 <script>
   function myFunction(e){
     for(let i = 0; i< e; i++){
-      let newBtn = document.createElement('button');
-      newBtn.innerText="Click me";
-      document.querySelector('#button-container').appendChild(newBtn);
+      let PyroBtn = document.createElement('button');
+     /*  let AnemoBtn = document.createElement('button');
+      let ElectroBtn = document.createElement('button');
+      let DendroBtn = document.createElement('button');
+      let HydroBtn = document.createElement('button');
+      let GeoBtn = document.createElement('button');
+      let CryoBtn = document.createElement('button'); */
+      PyroBtn.innerText="Pyro";
+      /* AnemoBtn.innerText="Anemo";
+      ElectroBtn.innerText="Electro";
+      DendroBtn.innerText="Dendro";
+      HydroBtn.innerText="Hydro";
+      GeoBtn.innerText="Geo";
+      CryoBtn.innerText="Cryo"; */
+      document.querySelector('#button-container').appendChild(PyroBtn/* , AnemoBtn, ElectroBtn, DendroBtn, HydroBtn, GeoBtn, CryoBtn */);
     }
   }
-</script>
-     <!--  <script>
-        function myFunction() {
-          document.display.style.backgroundColor === "red";
-        }
-        </script> -->
+</script> -->
 
-</body>
-</html>
-
-
-<!-- 
-function myFunction() {
-  DOMSelectors.displaySection.innerHTML = " ";
-  data
-    .filter((VisionP) => VisionP.vision === "pyro")
-    .forEach((VisionP) => {
-      // document.getElementsByClassName("flip-card-front").style.backgroundColor = "red";
-  document.body.style.backgroundColor = "red";
-}
-</script>
-}
-</div> -->
 
     <section class="display" id="display"></section>
-
-    <h2 id="api-response-1"></h2>
-    <h2 id="api-response-2"></h2>
-    <h2 id="api-response-3"></h2>
     <script type="module" src="/Main.js"></script>
+
   </body>
 </html>

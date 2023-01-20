@@ -16,7 +16,9 @@ body,
 .m,
 .r4,
 .r5,
-.c {
+.v,
+.click,
+#button-container {
   width: 28rem;
   height: 8rem;
   padding: 2rem 5rem 2rem 5rem;
@@ -25,6 +27,15 @@ body,
   background-color: blueviolet;
   border-radius: 2rem;
 }
+
+/* 
+PyroBtn = document.createElement('button');
+      let AnemoBtn = document.createElement('button');
+      let ElectroBtn = document.createElement('button');
+      let DendroBtn = document.createElement('button');
+      let HydroBtn = document.createElement('button');
+      let GeoBtn = document.createElement('button');
+      let CryoBtn */
 
 .display {
   display: flex;
@@ -91,7 +102,7 @@ body,
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: var(--gray);
-  border: 1rem solid var(--primary);
+  border: 0.5rem solid var(--primary);
 }
 
 .flip-card-front {
@@ -109,7 +120,7 @@ body,
 
 :root {
   --white: #ffffff;
-  --gray: rgb(240, 235, 236);
+  --gray: rgb(224, 201, 252);
   --black: #000000;
   --pyro: #ef3333;
   --geo: rgb(251, 215, 6);

@@ -12,6 +12,8 @@ const DOMSelectors = {
   displaySection: document.getElementById("display"),
 };
 
+/* LINK FOR BUTTONS https://search.3schools.in/2022/08/create-multiple-buttons-js.html */
+
 async function getData(characters) {
   try {
     const response = await fetch(characters);
@@ -20,33 +22,21 @@ async function getData(characters) {
     } else {
       const data = await response.json();
 
-      /*    function PyroColor() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((VisionP) => VisionP.vision === "pyro")
-          .forEach((VisionP) => {
-            document.getElementsByClassName(
-              "flip-card-front"
-            ).style.borderColor = "var(--pyro)";
-            card(VisionP);
-          });
-      } */
+      var clickCount = 0;
+      var update = document.getElementById("update");
 
-      /*      var Vision = document.getElementsByClassName(display - type);
-      var color;
-      var border = document.getElementById("flip-card-front");
-      // .flip-card-back
-      if (Vision == "pyro" || Vision == "red" || Vision == "RED") {
-        color = "var(--pyro)";
-        border.style.borderColor = color;
-      } */
-
-
-     /* LINK FOR BUTTONS https://search.3schools.in/2022/08/create-multiple-buttons-js.html */
-
-
-
-
+      document.getElementById("VBtn").onclick = function () {
+        clickCount++;
+        if (clickCount === 1) {
+          update.innerHTML = "You pushed the button";
+        } else if (clickCount === 2) {
+          update.innerHTML = "You pushed the button again";
+        } else if (clickCount >= 3 && clickCount <= 5) {
+          update.innerHTML = `You pushed the button ${clickCount} times`;
+        } else if (clickCount > 6) {
+          update.innerHTML = "Stop pushing the button";
+        }
+      };
 
       function all() {
         data.forEach((character) => {
