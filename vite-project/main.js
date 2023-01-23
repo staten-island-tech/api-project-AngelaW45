@@ -25,64 +25,7 @@ async function getData(characters) {
           card(character);
         });
       }
-      all();
-
-      function AllCharacters(data) {
-        DOMSelectors.displaySection.innerHTML = " ";
-        all(data);
-      }
-
-      function Female(data) {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((character) => character.gender === "female")
-          .forEach((character) => {
-            card(character);
-          });
-      }
-
-      function Male(data) {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((character) => character.gender === "male")
-          .forEach((character) => {
-            card(character);
-          });
-      }
-
-      function Rarity4(data) {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((character) => character.rarity === 4)
-          .forEach((character) => {
-            card(character);
-          });
-      }
-
-      function Rarity5(data) {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((character) => character.rarity === 5)
-          .forEach((character) => {
-            card(character);
-          });
-      }
-
-      DOMSelectors.FemaleBtn.addEventListener("click", function () {
-        Female(data);
-      });
-      DOMSelectors.MaleBtn.addEventListener("click", function () {
-        Male(data);
-      });
-      DOMSelectors.Rarity4Btn.addEventListener("click", function () {
-        Rarity4(data);
-      });
-      DOMSelectors.Rarity5Btn.addEventListener("click", function () {
-        Rarity5(data);
-      });
-      DOMSelectors.AllCharactersBtn.addEventListener("click", function () {
-        AllCharacters(data);
-      });
+      all(data);
 
       console.log(response.status);
       console.log(data);
@@ -114,3 +57,65 @@ function card(character) {
     </div>`
   );
 }
+
+async function init() {
+  let GenshinData = await getData(characters);
+
+  function AllCharacters(data) {
+    DOMSelectors.displaySection.innerHTML = " ";
+    all(data);
+  }
+
+  function Female(data) {
+    DOMSelectors.displaySection.innerHTML = " ";
+    data
+      .filter((character) => character.gender === "female")
+      .forEach((character) => {
+        card(character);
+      });
+  }
+
+  function Male(data) {
+    DOMSelectors.displaySection.innerHTML = " ";
+    data
+      .filter((character) => character.gender === "male")
+      .forEach((character) => {
+        card(character);
+      });
+  }
+
+  function Rarity4(data) {
+    DOMSelectors.displaySection.innerHTML = " ";
+    data
+      .filter((character) => character.rarity === 4)
+      .forEach((character) => {
+        card(character);
+      });
+  }
+
+  function Rarity5(data) {
+    DOMSelectors.displaySection.innerHTML = " ";
+    data
+      .filter((character) => character.rarity === 5)
+      .forEach((character) => {
+        card(character);
+      });
+  }
+
+  DOMSelectors.FemaleBtn.addEventListener("click", function () {
+    Female(data);
+  });
+  DOMSelectors.MaleBtn.addEventListener("click", function () {
+    Male(data);
+  });
+  DOMSelectors.Rarity4Btn.addEventListener("click", function () {
+    Rarity4(data);
+  });
+  DOMSelectors.Rarity5Btn.addEventListener("click", function () {
+    Rarity5(data);
+  });
+  DOMSelectors.AllCharactersBtn.addEventListener("click", function () {
+    AllCharacters(data);
+  });
+}
+init();

@@ -10,13 +10,10 @@ body,
 }
 
 .c,
-.e,
-.w,
 .f,
 .m,
 .r4,
-.r5.
-#button-container {
+.r5 {
   width: 28rem;
   height: 8rem;
   padding: 2rem 4rem 2rem 4rem;
