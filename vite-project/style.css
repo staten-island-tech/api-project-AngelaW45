@@ -15,27 +15,16 @@ body,
 .f,
 .m,
 .r4,
-.r5,
-.v,
-.click,
+.r5.
 #button-container {
   width: 28rem;
   height: 8rem;
-  padding: 2rem 5rem 2rem 5rem;
+  padding: 2rem 4rem 2rem 4rem;
   font-size: 3rem;
-  margin: 5rem;
+  margin: 4rem;
   background-color: blueviolet;
   border-radius: 2rem;
 }
-
-/* 
-PyroBtn = document.createElement('button');
-      let AnemoBtn = document.createElement('button');
-      let ElectroBtn = document.createElement('button');
-      let DendroBtn = document.createElement('button');
-      let HydroBtn = document.createElement('button');
-      let GeoBtn = document.createElement('button');
-      let CryoBtn */
 
 .display {
   display: flex;

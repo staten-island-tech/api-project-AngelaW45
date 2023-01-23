@@ -12,8 +12,6 @@ const DOMSelectors = {
   displaySection: document.getElementById("display"),
 };
 
-/* LINK FOR BUTTONS https://search.3schools.in/2022/08/create-multiple-buttons-js.html */
-
 async function getData(characters) {
   try {
     const response = await fetch(characters);
@@ -22,35 +20,19 @@ async function getData(characters) {
     } else {
       const data = await response.json();
 
-      var clickCount = 0;
-      var update = document.getElementById("update");
-
-      document.getElementById("VBtn").onclick = function () {
-        clickCount++;
-        if (clickCount === 1) {
-          update.innerHTML = "You pushed the button";
-        } else if (clickCount === 2) {
-          update.innerHTML = "You pushed the button again";
-        } else if (clickCount >= 3 && clickCount <= 5) {
-          update.innerHTML = `You pushed the button ${clickCount} times`;
-        } else if (clickCount > 6) {
-          update.innerHTML = "Stop pushing the button";
-        }
-      };
-
-      function all() {
+      function all(data) {
         data.forEach((character) => {
           card(character);
         });
       }
       all();
 
-      function AllCharacters() {
+      function AllCharacters(data) {
         DOMSelectors.displaySection.innerHTML = " ";
-        all();
+        all(data);
       }
 
-      function Female() {
+      function Female(data) {
         DOMSelectors.displaySection.innerHTML = " ";
         data
           .filter((character) => character.gender === "female")
@@ -59,7 +41,7 @@ async function getData(characters) {
           });
       }
 
-      function Male() {
+      function Male(data) {
         DOMSelectors.displaySection.innerHTML = " ";
         data
           .filter((character) => character.gender === "male")
@@ -68,7 +50,7 @@ async function getData(characters) {
           });
       }
 
-      function Rarity4() {
+      function Rarity4(data) {
         DOMSelectors.displaySection.innerHTML = " ";
         data
           .filter((character) => character.rarity === 4)
@@ -77,7 +59,7 @@ async function getData(characters) {
           });
       }
 
-      function Rarity5() {
+      function Rarity5(data) {
         DOMSelectors.displaySection.innerHTML = " ";
         data
           .filter((character) => character.rarity === 5)
@@ -87,23 +69,19 @@ async function getData(characters) {
       }
 
       DOMSelectors.FemaleBtn.addEventListener("click", function () {
-        Female();
+        Female(data);
       });
-
       DOMSelectors.MaleBtn.addEventListener("click", function () {
-        Male();
+        Male(data);
       });
-
       DOMSelectors.Rarity4Btn.addEventListener("click", function () {
-        Rarity4();
+        Rarity4(data);
       });
-
       DOMSelectors.Rarity5Btn.addEventListener("click", function () {
-        Rarity5();
+        Rarity5(data);
       });
-
       DOMSelectors.AllCharactersBtn.addEventListener("click", function () {
-        AllCharacters();
+        AllCharacters(data);
       });
 
       console.log(response.status);
@@ -136,100 +114,3 @@ function card(character) {
     </div>`
   );
 }
-
-/*       function Sword() {r
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((CharWeapon) => CharWeapon.weapon === "sword")
-          .forEach((CharWeapon) => {
-            card(CharWeapon);
-          });
-      }
-      function Claymore() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((CharWeapon) => CharWeapon.weapon === "claymore")
-          .forEach((CharWeapon) => {
-            card(CharWeapon);
-          });
-      }
-      function Bow() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((CharWeapon) => CharWeapon.weapon === "bow")
-          .forEach((CharWeapon) => {
-            card(CharWeapon);
-          });
-      }
-      function Polearm() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((CharWeapon) => CharWeapon.weapon === "polearm")
-          .forEach((CharWeapon) => {
-            card(CharWeapon);
-          });
-      }
-      function Catalyst() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((CharWeapon) => CharWeapon.weapon === "catalyst")
-          .forEach((CharWeapon) => {
-            card(CharWeapon);
-          });
-      }
-      function Anemo() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((Vision) => Vision.vision === "anemo")
-          .forEach((Vision) => {
-            card(Vision);
-          });
-      }
-      function Pyro() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((Vision) => Vision.vision === "pyro")
-          .forEach((Vision) => {
-            card(Vision);
-          });
-      }
-      function Cryo() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((Vision) => Vision.vision === "cryo")
-          .forEach((Vision) => {
-            card(Vision);
-          });
-      }
-      function Hydro() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((Vision) => Vision.vision === "hydro")
-          .forEach((Vision) => {
-            card(Vision);
-          });
-      }
-      function Electro() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((Vision) => Vision.vision === "electro")
-          .forEach((Vision) => {
-            card(Vision);
-          });
-      }
-      function Dendro() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((Vision) => Vision.vision === "dendro")
-          .forEach((Vision) => {
-            card(Vision);
-          });
-      }
-      function Geo() {
-        DOMSelectors.displaySection.innerHTML = " ";
-        data
-          .filter((Vision) => Vision.vision === "geo")
-          .forEach((Vision) => {
-            card(Vision);
-          });
-      } */
