@@ -19,7 +19,7 @@ body,
   padding: 2rem 4rem 2rem 4rem;
   font-size: 3rem;
   margin: 4rem;
-  background-color: blueviolet;
+  background-color: var(--darkP);
   border-radius: 2rem;
 }
 
@@ -87,18 +87,18 @@ body,
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: var(--gray);
-  border: 0.5rem solid var(--primary);
+  background-color: var(--lightP);
+  border: 0.5rem solid var(--Black);
 }
 
 .flip-card-front {
-  color: var(--black);
+  color: var(--Black);
   border-radius: 15px;
   padding: 5vh 2vh 5vh 2vh;
 }
 
 .flip-card-back {
-  color: var(--black);
+  color: var(--Black);
   transform: rotateY(180deg);
   border-radius: 15px;
   padding: 4vh;
@@ -106,18 +106,12 @@ body,
 
 :root {
   --white: #ffffff;
-  --gray: rgb(224, 201, 252);
-  --black: #000000;
-  --pyro: #ef3333;
-  --geo: rgb(251, 215, 6);
-  --dendro: rgba(45, 252, 162, 0.697);
-  --anemo: #72e7c6;
-  --cryo: rgb(56, 238, 232);
-  --hydro: rgb(66, 92, 226);
-  --electro: rgb(153, 16, 212);
+  --lightP: rgb(224, 201, 252);
+  --darkP: rgb(152, 55, 242);
+  --Black: #000000;
 
-  --primary: var(--black);
-  --secondary: var(--geo);
+  --primary: var(--Black);
+  --secondary: var(--lightP);
 
   --app: 3.375rem;
   --h1: 7rem;
@@ -154,4 +148,77 @@ h4,
 h5 {
   text-align: center;
   margin: auto;
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --app: 3.375rem;
+    --h1: 7.3rem;
+    --h2: 5.3rem;
+    --h3: 3.5rem;
+    --h4: 2.5rem;
+    --h5: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .c,
+  .f,
+  .m,
+  .r4,
+  .r5 {
+    width: 27rem;
+    height: 7rem;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    margin: 4rem;
+  }
+
+  :root {
+    --h1: 6rem;
+    --h2: 5rem;
+    --h3: 3rem;
+    --h4: 2rem;
+    --h5: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  #header {
+    padding-top: 5vh;
+  }
+
+  .c,
+  .f,
+  .m,
+  .r4,
+  .r5 {
+    width: 15rem;
+    height: 5rem;
+    padding: 0.7rem 2rem 0.7rem 2rem;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+  }
+
+  :root {
+    --h1: 4.3rem;
+    --h2: 3rem;
+    --h3: 2rem;
+    --h4: 1.7rem;
+    --h5: 1.8rem;
+  }
+
+  .flip-card {
+    width: 30rem;
+    height: 30rem;
+    margin: 2rem auto;
+  }
+
+  .flip-card-back {
+    padding: 3vh 4vh 3vh 4vh;
+  }
+
+  .display-birthday,
+  .displpay-rarity {
+    padding: 2vh;
+  }
 }
